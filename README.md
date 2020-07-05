@@ -21,7 +21,11 @@ and on the observer run:
 ```bash
 sudo python run_obs.py
 ```
-You should see advertisement packets being received on the observer.
+You should see advertisement packets being received on the observer. To log received RSSI values to file, instead of running the observer, use:
+```bash
+sudo python run_range.py
+```
+When prompted, enter a distance at which the measurement is being taken. This should be a float to 2dp. Any non-numeric character (except ".") will end the task. The number of collected RSSI data points can be changed by editing the value of ```numt``` in this file. Data is saved in the file ```./range.csv```.
 
 ## Editing
 In run_obs.py you can change the MAC address that will be filtered in the Observer.py class. If you're testing in a busy environment this is useful.
